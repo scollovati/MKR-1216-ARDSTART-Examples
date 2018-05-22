@@ -4,16 +4,16 @@
 
 void setup()
 {
-  pinMode(12,OUTPUT);
+  pinMode(13,OUTPUT);
   pinMode(5,INPUT);
 }
 
 
 void loop()
 {
-    digitalWrite(12,HIGH);
+    digitalWrite(13,HIGH);
     delay(analogRead(5));
-    digitalWrite(12,LOW);
+    digitalWrite(13,LOW);
     delay(analogRead(5));
 }
 
