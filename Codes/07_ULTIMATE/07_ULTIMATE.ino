@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-Servo servos[13];
+Servo servomotore;
 
 /***   Global variables   ***/
 int On=0;
@@ -9,17 +9,12 @@ int On=0;
 
 void setup()
 {
-  servos[3].attach(3);
-
-
+  servomotore.attach(3);
   pinMode(2,OUTPUT);
-
-    servos[3].write(90);
+  servomotore.write(90);
   delay(100);
   digitalWrite(2,LOW);
-
   pinMode(7,INPUT);
-
 }
 
 
@@ -35,15 +30,12 @@ void loop()
      }
     if (On == 1) {
       delay(1000);
-      servos[3].write(0);
+      servomotore.write(0);
       delay(500);
       if (digitalRead(7) == HIGH) {
         On=1 - On;
        }
-      servos[3].write(90);
+      servomotore.write(90);
       delay(500);
      }
-
 }
-
-/***   Function definition   ***/
