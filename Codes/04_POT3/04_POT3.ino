@@ -6,14 +6,14 @@ int luce=0;
 
 void setup()
 {
-  pinMode(5,INPUT);
+  pinMode(A5,INPUT);
   pinMode(11,OUTPUT); // PIN11 funziona in PWM :)
 }
 
 
 void loop()
 {
-    pot=analogRead(5);
+    pot=analogRead(A5);
     luce=map(pot,0,1023,0,255);
     analogWrite(11,luce);
 }

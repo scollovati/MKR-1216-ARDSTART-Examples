@@ -5,16 +5,16 @@
 void setup()
 {
   pinMode(13,OUTPUT);
-  pinMode(5,INPUT);
+  pinMode(A5,INPUT);
 }
 
 
 void loop()
 {
     digitalWrite(13,HIGH);
-    delay(analogRead(5));
+    delay(analogRead(A5));
     digitalWrite(13,LOW);
-    delay(analogRead(5));
+    delay(analogRead(A5));
 }
 
 /***   Function definition   ***/
